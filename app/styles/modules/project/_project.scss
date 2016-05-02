@@ -1,0 +1,27 @@
+.project {
+
+  &__table {
+    table-layout: fixed;
+
+    &-column-select {
+      width: 25px;
+    }
+
+    &-column-story {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 30%;
+    }
+
+    &-column-description {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &__toolbar {
+    margin-bottom: 1rem;
+  }
+}

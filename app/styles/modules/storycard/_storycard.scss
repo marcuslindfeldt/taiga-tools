@@ -1,0 +1,60 @@
+.storycard {
+
+  & {
+    padding: 5mm;
+    margin: 0;
+    border: none;
+    width: 148mm;
+    height: 104mm;
+    float: left;
+    page-break-inside: avoid;
+  }
+
+  &__block {
+    padding: 10mm;
+    border: 1px dashed #ccc;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__spacer {
+    float: right;
+    width: 0px;
+    height: 100%;
+    margin-top: -110px;
+    display: block;
+  }
+
+  &__progress {
+    float: right;
+    clear: right;
+    margin: 10px;
+    margin-bottom: 100%;
+    margin-right: 0px;
+    position: relative;
+  }
+
+  &__point {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    font-size: 32px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+  }
+
+  &__wrapper {
+    float: left;
+    width: 297mm;
+  }
+}
+
+@page {
+  size: A4 landscape;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}

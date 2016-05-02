@@ -1,0 +1,33 @@
+<div class="project__toolbar">
+  {{#link-to "projects" class="btn btn-default"}}&larr; Back to projects{{/link-to}}
+  {{#link-to "print" (query-params userstories=selected project=model.project.id) class="btn btn-primary pull-xs-right"}}Print{{/link-to}}
+</div>
+
+<table class="table table-bordered table-hover table-sm project__table">
+  <thead>
+    <tr>
+      <th class="project__table-column-select">
+        <label class="c-input c-checkbox">
+          <input type="checkbox" {{action "toggleAll" preventDefault=false}} checked={{hasSelected}}>
+          <span class="c-indicator"></span>
+        </label>
+      </th>
+      <th class="project__table-column-story">Story</th>
+      <th class="project__table-column-description">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model.userstories as |story|}}
+    <tr  {{action "toggle" story}}>
+      <td class="project__table-column-select">
+        <label class="c-input c-checkbox">
+          <input type="checkbox" checked={{story.selected}}>
+          <span class="c-indicator"></span>
+        </label>
+      </td>
+      <td class="project__table-column-story">{{story.subject}}</td>
+      <td class="project__table-column-description">{{story.description}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

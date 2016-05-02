@@ -1,0 +1,14 @@
+// Module Rules
+//
+// Modules divides an application into clusters of code that, by some criterion,
+// belong together. The modules directory structure mirrors that of the
+// javascript module directory structure. A module will typically contain
+// several reausable components.
+//
+// https://smacss.com/book/type-module
+
+@import "header/header";
+@import "storycard/storycard";
+@import "project/project";
+@import "icons/icons";
+@import "signin/signin";

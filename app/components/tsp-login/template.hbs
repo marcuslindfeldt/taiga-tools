@@ -1,0 +1,13 @@
+<form class="form-signin" {{action 'authenticate' on='submit'}}>
+  <h2 class="form-signin-heading">Please sign in</h2>
+  {{#if errorMessage}}
+  <div class="alert alert-danger" role="alert">
+    <strong>Unable to sign in!</strong> {{errorMessage}}
+  </div>
+  {{/if}}
+  <label for="identification" class="sr-only">Username</label>
+  {{input id='identification' placeholder='Enter Username' value=identification class="form-control"}}
+  <label for="password" class="sr-only">Password</label>
+  {{input id='password' placeholder='Enter Password' type='password' value=password class="form-control"}}
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
