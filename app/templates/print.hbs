@@ -1,5 +1,5 @@
 <div class="storycard__wrapper">
-  {{#each model as |story|}}
-    {{tsp-story-card story=story}}
+  {{#each stories as |story|}}
+    {{tt-story-card story=story.model qrLink=story.link}}
   {{/each}}
 </div>

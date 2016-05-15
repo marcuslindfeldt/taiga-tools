@@ -1,6 +1,6 @@
 <div class="project__toolbar">
   {{#link-to "projects" class="btn btn-default"}}&larr; Back to projects{{/link-to}}
-  {{#link-to "print" (query-params userstories=selected project=model.project.id) class="btn btn-primary pull-xs-right"}}Print{{/link-to}}
+  {{#link-to "print" (query-params project=model.project.id userstories=selected) target="_blank" class="btn btn-primary pull-xs-right"}}Print{{/link-to}}
 </div>
 
 <table class="table table-bordered table-hover table-sm project__table">

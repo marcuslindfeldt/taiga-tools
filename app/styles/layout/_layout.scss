@@ -9,3 +9,8 @@
 // Layout styles.
 //
 // https://smacss.com/book/type-layout
+
+body > .ember-view {
+  height: 100%;
+  width: 100%;
+}

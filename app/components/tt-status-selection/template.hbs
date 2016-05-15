@@ -1,0 +1,5 @@
+{{#each statusList as |status|}}
+  <label class="btn btn-primary btn-block {{if status.isActive "active"}}">
+    <input type="radio" name="options" id={{status.model.id}} autocomplete="off" checked={{status.isActive}} {{action "changeStatus" story status.model}}>{{status.model.name}}
+  </label>
+{{/each}}

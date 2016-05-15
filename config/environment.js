@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'taiga-story-printer',
+    modulePrefix: 'taiga-tools',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -16,6 +16,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      appUrl: process.env.APP_URL || 'http://localhost:4200',
       apiUrl: 'https://api.taiga.io',
     },
 
@@ -40,6 +41,7 @@ module.exports = function(environment) {
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
+
 
     ENV.APP.rootElement = '#ember-testing';
   }

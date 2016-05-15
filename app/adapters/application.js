@@ -1,6 +1,7 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
-import ENV from 'taiga-story-printer/config/environment';
+import ENV from 'taiga-tools/config/environment';
 
 export default DS.RESTAdapter.extend(DataAdapterMixin, {
 
@@ -12,5 +13,9 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
 
   headers: {
     'x-disable-pagination': 'True',
+  },
+
+  pathForType: function(type) {
+    return Ember.String.pluralize(Ember.String.dasherize(type));
   },
 });

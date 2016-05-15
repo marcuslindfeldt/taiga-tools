@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import Base from 'ember-simple-auth/authenticators/base';
-import ENV from 'taiga-story-printer/config/environment';
+import ENV from 'taiga-tools/config/environment';
 
 export default Base.extend({
 

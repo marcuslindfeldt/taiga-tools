@@ -1,0 +1,17 @@
+<div class="storycard__block">
+  <div class="storycard__meta">
+    <div class="storycard__estimate">
+      <span class="storycard__points">{{story.total_points}}</span>
+      <div class="storycard__progress"></div>
+      <div class="storycard__progress"></div>
+      <div class="storycard__progress"></div>
+      <div class="storycard__progress"></div>
+      <div class="storycard__progress"></div>
+    </div>
+    <div class="storycard__qrcode">
+      {{qr-code data=qrLink width="300" height="300"}}
+    </div>
+  </div>
+  <h4 class="storycard__subject">{{story.subject}}</h4>
+  <p class="storycard__description">{{story.description}}</p>
+</div>
